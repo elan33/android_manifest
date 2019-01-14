@@ -5,6 +5,10 @@
            fetch="https://github.com/Havoc-OS"
            revision="pie" />
 
+  <remote  name="fly"
+           fetch="https://github.com/Flykerry"
+           revision="pie" />
+
   <remote  name="havoc-devices"
            fetch="https://github.com/Havoc-Devices"
            revision="pie" />
@@ -17,7 +21,7 @@
   <!-- Build -->
   <project path="build/blueprint" name="android_build_blueprint" remote="havoc" />
   <project path="build/kati" name="android_build_kati" remote="havoc" />
-  <project path="build/make" name="android_build" remote="havoc" >
+  <project path="build/make" name="android_build" remote="fly" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -48,13 +52,14 @@
   <project path="external/skia" name="android_external_skia" remote="havoc" />
   <project path="external/skqp" name="android_external_skqp" remote="havoc" />
   <project path="external/sqlite" name="android_external_sqlite" remote="havoc" />
+  <project path="external/suda/SudaSDKs" name="platform_external_suda_SudaSDKs" remote="fly" />
   <project path="external/tinycompress" name="android_external_tinycompress" remote="havoc" />
   <project path="external/turbine" name="android_external_turbine" remote="havoc" />
   <project path="external/vixl" name="android_external_vixl" remote="havoc" />
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="android_frameworks_av" remote="havoc" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="havoc" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="fly" />
   <project path="frameworks/compile/mclinker" name="android_frameworks_compile_mclinker" remote="havoc" />
   <project path="frameworks/havoc" name="android_frameworks_havoc" remote="havoc" />
   <project path="frameworks/native" name="android_frameworks_native" remote="havoc" />
@@ -79,13 +84,14 @@
   <!-- Packages -->
   <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="havoc" />
   <project path="packages/apps/CellBroadcastReceiver" name="android_packages_apps_CellBroadcastReceiver" remote="havoc" />
-  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="havoc" />
+  <project path="packages/apps/Calendar" name="android_packages_apps_Calendar" remote="fly" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="fly" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="havoc" />
-  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="havoc" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="fly" />
   <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="havoc" />
   <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" remote="havoc" />
   <project path="packages/apps/HavocSettings" name="android_packages_apps_HavocSettings" remote="havoc" />
-  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="havoc" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="fly" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="havoc" />
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="havoc" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="havoc" />
@@ -97,8 +103,9 @@
   <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="havoc" />
   <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="havoc" />
   <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="havoc" />
+  <project path="packages/providers/PhoneLocationProvider" name="platform_packages_provider_PhoneLocationProvider" remote="fly" />
   <project path="packages/providers/WeatherProvider" name="android_packages_providers_WeatherProvider" remote="havoc" />
-  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="havoc" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="fly" />
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="havoc" />
 
   <!-- Prebuilts -->
@@ -120,7 +127,7 @@
 
   <!-- Vendor -->
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="havoc" />
-  <project path="vendor/havoc" name="android_vendor_havoc" remote="havoc" />
+  <project path="vendor/havoc" name="android_vendor_havoc" remote="fly" />
   <project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="havoc" />
 
 </manifest>
